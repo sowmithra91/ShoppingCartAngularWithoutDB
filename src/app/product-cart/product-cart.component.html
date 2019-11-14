@@ -1,0 +1,8 @@
+<div>
+    <span>{{productInCart.productTitle}}</span>
+    <button (click)="incrementProductCount(productInCart)">+</button>
+    <button (click)="decrementProductCount(productInCart)">-</button>
+    <span>{{productInCart.productCheckoutCount}}</span>
+    <button (click)="deleteThisProductFromCart(productInCart)">Delete</button>
+    <span [hidden]="!isError">{{errorMessage}}</span>
+</div>

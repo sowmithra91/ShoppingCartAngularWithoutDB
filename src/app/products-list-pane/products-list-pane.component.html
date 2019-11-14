@@ -1,0 +1,6 @@
+<div style="background-color: cadetblue; margin: 40px;">
+    <div class="card-group">
+        <app-product (productToEmit)="addToCart($event)" class="col-4" *ngFor="let product of products" [product]="product"></app-product>
+    </div>
+</div>
+<app-shopping-cart *ngIf="productsInCart.length" [productsInCart]="productsInCart"></app-shopping-cart>

@@ -1,0 +1,8 @@
+<div>
+    <span>{{counterChild.id}}</span>
+    <button (click)="incrementCount(counterChild)">+</button>
+    <button (click)="decrementCount(counterChild)">-</button>
+    <span>{{counterChild.count}}</span>
+    <button (click)="sendIdToParent(counterChild)">Delete</button>
+    <span [hidden]="!isError">{{errorMessage}}</span>
+</div>

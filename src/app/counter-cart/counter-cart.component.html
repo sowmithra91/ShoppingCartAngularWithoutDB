@@ -1,0 +1,3 @@
+<app-counter (counterToEmit)="deleteCounter($event)" *ngFor="let counter of counters" [counterChild]="counter"></app-counter>
+<div>Total: {{getCount()}}</div>
+<button (click)="addCounter()">Add Counter</button>

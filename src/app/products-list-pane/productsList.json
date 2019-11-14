@@ -1,0 +1,54 @@
+{
+    "productsList":[{
+        "productId":1,
+        "productCatergory":"Sample Catergory",
+        "productDescription":"Sample Product1 Description",
+        "productTitle":"Sample Product1 Title",
+        "productPrice":100,
+        "isProductAvailable":true,
+        "productCheckoutCount":1
+    },
+    {
+        "productId":2,
+        "productCatergory":"Sample Catergory",
+        "productDescription":"Sample Product2 Description",
+        "productTitle":"Sample Product2 Title",
+        "productPrice":200,
+        "isProductAvailable":true,
+        "productCheckoutCount":1
+    },{
+        "productId":3,
+        "productCatergory":"Sample Catergory",
+        "productDescription":"Sample Product3 Description",
+        "productTitle":"Sample Product3 Title",
+        "productPrice":300,
+        "isProductAvailable":true,
+        "productCheckoutCount":1
+    },
+    {
+        "productId":4,
+        "productCatergory":"Sample Catergory",
+        "productDescription":"Sample Product4 Description",
+        "productTitle":"Sample Product4 Title",
+        "productPrice":400,
+        "isProductAvailable":true,
+        "productCheckoutCount":1
+    },{
+        "productId":5,
+        "productCatergory":"Sample Catergory",
+        "productDescription":"Sample Product5 Description",
+        "productTitle":"Sample Product5 Title",
+        "productPrice":500,
+        "isProductAvailable":true,
+        "productCheckoutCount":1
+    },
+    {
+        "productId":6,
+        "productCatergory":"Sample Catergory",
+        "productDescription":"Sample Product6 Description",
+        "productTitle":"Sample Product6 Title",
+        "productPrice":600,
+        "isProductAvailable":true,
+        "productCheckoutCount":1
+    }]
+}

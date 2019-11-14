@@ -1,0 +1,2 @@
+<app-product-cart (productToDeleteFromCart)="removeFromCart($event)" *ngFor="let productInCart of productsInCart" [productInCart]="productInCart"></app-product-cart>
+<div>Total Cost : {{getTotalCheckoutCost()}}</div>
