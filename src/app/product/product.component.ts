@@ -35,8 +35,8 @@ export class ProductComponent implements OnInit {
   }
 
   sendProductToPaymentCart(product:Product) {
+    this.product.isProductAvailable = false;
     this.productToEmit.emit(product);
-    console.log("Test");
   }
 
 }

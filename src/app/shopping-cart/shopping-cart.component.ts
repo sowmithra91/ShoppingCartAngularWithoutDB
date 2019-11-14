@@ -28,6 +28,8 @@ export class ShoppingCartComponent implements OnInit {
 
   removeFromCart(productToRemove: Product) : void {
     this.productsInCart.splice(this.productsInCart.findIndex(product => product.productId === productToRemove.productId),1);
+    productToRemove.isProductAvailable = true;
+    productToRemove.productCheckoutCount = 1;
   }
 
 }
