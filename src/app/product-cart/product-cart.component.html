@@ -4,5 +4,11 @@
     <button (click)="decrementProductCount(productInCart)">-</button>
     <span>{{productInCart.productCheckoutCount}}</span>
     <button (click)="deleteThisProductFromCart(productInCart)">Delete</button>
-    <span [hidden]="!isError">{{errorMessage}}</span>
+</div>
+<div style="text-align: center;">
+    <div [hidden]="!isError" [ngClass]="{'fade':doFade}" class="alert alert-danger"
+        style="display: inline-block; width: fit-content;">
+        <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        Product Count Can not be Zero!
+    </div>
 </div>

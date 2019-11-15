@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
   @Input() product: Product;
   @Output() productToEmit = new EventEmitter<Product>();
 
-  errorMessage:String ="Product Count Can not be Zero";
+  errorMessage:string ="Product Count Can not be Zero";
   isError:boolean = false;
 
   incrementProductCount(product:Product) : void {
