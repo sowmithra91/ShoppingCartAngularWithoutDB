@@ -16,25 +16,29 @@ export class ProductCartComponent implements OnInit {
   @Input() productInCart: Product;
   @Output() productToDeleteFromCart = new EventEmitter<Product>();
 
-  errorMessage:String ="Product Count Can not be Zero";
-  isError:boolean = false;
+  isError: boolean = false;
+  doFade: boolean = false;
 
-  incrementProductCount(product:Product) : void {
-    if(product.productCheckoutCount === 1){
+  incrementProductCount(product: Product): void {
+    if (product.productCheckoutCount === 1) {
       this.isError = false;
     }
     product.productCheckoutCount++;
   }
 
-  decrementProductCount(product:Product) : void {
-    if(product.productCheckoutCount === 1){
+  decrementProductCount(product: Product): void {
+    if (product.productCheckoutCount === 1) {
       this.isError = true;
-    }else{
+      setTimeout(() => {
+        this.doFade = true;
+      }, 2000);
+      this.doFade = false;
+    } else {
       product.productCheckoutCount--;
     }
   }
 
-  deleteThisProductFromCart(product:Product) {
+  deleteThisProductFromCart(product: Product) {
     this.productToDeleteFromCart.emit(product);
   }
 
