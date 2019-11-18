@@ -16,24 +16,6 @@ export class ProductComponent implements OnInit {
   @Input() product: Product;
   @Output() productToEmit = new EventEmitter<Product>();
 
-  errorMessage:string ="Product Count Can not be Zero";
-  isError:boolean = false;
-
-  incrementProductCount(product:Product) : void {
-    if(product.productCheckoutCount === 1){
-      this.isError = false;
-    }
-    product.productCheckoutCount++;
-  }
-
-  decrementProductCount(product:Product) : void {
-    if(product.productCheckoutCount === 1){
-      this.isError = true;
-    }else{
-      product.productCheckoutCount--;
-    }
-  }
-
   sendProductToPaymentCart(product:Product) {
     this.product.isProductAvailable = false;
     this.productToEmit.emit(product);

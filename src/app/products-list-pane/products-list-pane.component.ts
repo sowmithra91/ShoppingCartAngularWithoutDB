@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Product } from '../product/product.model';
 import * as productsList from './productsList.json';
 
@@ -16,6 +16,8 @@ export class ProductsListPaneComponent implements OnInit {
     productsListJson["productsList"].forEach( obj => this.products.push(Object.assign(new Product(),obj)));
   }
 
+  @Output() productsInCartToEmit = new EventEmitter<Product[]>();
+
   products:Product[] = [];
 
   productsInCart:Product[] = [];
@@ -23,6 +25,7 @@ export class ProductsListPaneComponent implements OnInit {
   addToCart(productRecieved: Product) {
     console.log("Id of product recieved " + productRecieved.productId + productRecieved.productDescription);
     this.productsInCart.push(productRecieved);
+    this.productsInCartToEmit.emit(this.productsInCart);
   }
 
 }

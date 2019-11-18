@@ -15,7 +15,7 @@
 
 <div class="tab-content">
   <div id="home" class="tab-pane fade show active">
-    <app-products-list-pane></app-products-list-pane>
+    <app-products-list-pane (productsInCartToEmit) = "addToProductsInCart($event)"></app-products-list-pane>
   </div>
   <div id="menu1" class="tab-pane fade">
     <h3>Menu 1</h3>
@@ -26,3 +26,4 @@
     <p>Some content in menu 2.</p>
   </div>
 </div>
+<app-shopping-cart *ngIf="productsInCart.length" [productsInCart]="productsInCart"></app-shopping-cart>

@@ -16,7 +16,6 @@ export class ProductCartComponent implements OnInit {
   @Input() productInCart: Product;
   @Output() productToDeleteFromCart = new EventEmitter<Product>();
 
-  errorMessage: string = "Product Count Can not be Zero";
   isError: boolean = false;
   doFade: boolean = false;
 
